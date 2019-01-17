@@ -1,0 +1,18 @@
+{
+  "URL_TESTRAIL": "https://te2qa.testrail.net/index.php?/api/v2/",
+  "URL_TESTRAIL_SUITES": "https://te2qa.testrail.net/index.php?/api/v2/get_suites/21/&suite_id=",
+  "URL_TESTRAIL_CASES": "https://te2qa.testrail.net/index.php?/api/v2/get_cases/21/&suite_id=",
+  "HEADER_TESTRAIL": {
+    "Cache-Control": "no-cache",
+    "Content-Type": "application/json"
+  },
+  "AUTH_TESTRAIL": "",
+  "URL_SMARTSHEETS": "https://api.smartsheet.com/2.0/sheets/",
+  "SMARTSHEETS": {
+      "ALT in Sprint Mobile Coverage - Daily": 1572782262773636,
+      "Mobile Test Coverage": 6185156768753540
+  },
+  "HEADER_SMARTSHEETS": {
+    "Cache-Control": "no-cache",
+    "Authorization": "Bearer"}
+}
