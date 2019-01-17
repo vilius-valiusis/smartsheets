@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2443a95f-2dce-4177-83a7-8a989e1cf148" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/vilius.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/jira.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/smartsheets.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/testrails.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/smartsheets/connection_vars.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/smartsheets/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartsheets/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/smartsheets/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/smartsheets/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="75">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -62,7 +56,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/smartsheets/connection_vars.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -98,9 +92,9 @@
         <option value="$PROJECT_DIR$/data/Jira.py" />
         <option value="$PROJECT_DIR$/data/jira.py" />
         <option value="$PROJECT_DIR$/data/testrails.py" />
-        <option value="$PROJECT_DIR$/smartsheets/main.py" />
         <option value="$PROJECT_DIR$/smartsheets/connection_vars.json" />
         <option value="$PROJECT_DIR$/data/smartsheets.py" />
+        <option value="$PROJECT_DIR$/smartsheets/main.py" />
       </list>
     </option>
   </component>
@@ -284,20 +278,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/smartsheets/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/smartsheets/connection_vars.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartsheets/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
