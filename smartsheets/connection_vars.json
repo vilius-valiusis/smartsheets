@@ -1,5 +1,4 @@
 {
-  "URL_TESTRAIL": "https://te2qa.testrail.net/index.php?/api/v2/",
   "URL_TESTRAIL_SUITES": "https://te2qa.testrail.net/index.php?/api/v2/get_suites/21/&suite_id=",
   "URL_TESTRAIL_CASES": "https://te2qa.testrail.net/index.php?/api/v2/get_cases/21/&suite_id=",
   "HEADER_TESTRAIL": {
@@ -14,5 +13,11 @@
   },
   "HEADER_SMARTSHEETS": {
     "Cache-Control": "no-cache",
-    "Authorization": "Bearer"}
+    "Authorization": ""},
+  "URL_JIRA_TOTAL": "https://te2web.atlassian.net/rest/api/2/search?jql=project=ALT&maxResults=0",
+  "URL_PARAMS_JIRA": "&fields=customfield_12825,priority,issuetype,status,labels,key,summary,customfield_10007&maxResults=100&startAt=",
+  "URL_JIRA": "https://te2web.atlassian.net/rest/api/2/search?jql=project=ALT",
+  "HEADER_JIRA": {
+    "Accept": "application/json",
+    "Authorization": ""}
 }
