@@ -1,0 +1,287 @@
+{
+    "smarthsheet_id": "1507223881967492",
+    "title": "ALT in Sprint Mobile Coverage - Daily",
+    "formatting": {
+      "nf": ",,,,,,,,,18,,,,,,",
+      "sf": ",2,1,,,,1,,,8,,,,,,"
+    },
+    "mappings": [
+      {
+        "title": "References",
+        "action": "len",
+        "value": ["references"],
+        "format": "sf"
+      },
+      {
+        "title": "Cases w References",
+        "action": "len",
+        "value": ["storyReferences", "hasReference"],
+        "format": "sf"
+      },
+      {
+        "title": "Cases w/o References",
+        "action": "len",
+        "value": ["storyReferences", "hasNoReference"],
+        "format": "sf"
+      },
+      {
+        "title": "List of Stories that Need References",
+        "action": "get",
+        "value": ["storyReferences", "hasNoReference"],
+        "format": "nf"
+      },
+      {
+        "title": "List of Stories that Have References",
+        "action": "get",
+        "value": ["storyReferences", "hasReference"],
+        "format": "nf"
+      },
+      {
+        "title": "List of Refs for Stories in Draft/Blocked",
+        "action": "get",
+        "value": ["storyReferences", "hasReferenceButDraftOrBlocked"],
+        "format": "nf"
+      },
+      {
+        "title": "Refs in Draft/Blocked",
+        "action": "len",
+        "value": ["storyReferences", "hasReferenceButDraftOrBlocked"],
+        "format": "sf"
+      },
+      {
+        "title": "Total JIRA",
+        "action": "int",
+        "value": ["total"],
+        "format": "sf"
+      },
+      {
+        "title": "Total AES",
+        "action": "len",
+        "value": ["tickets"],
+        "format": "sf"
+      },
+      {
+        "title": "Bugs",
+        "action": "len",
+        "value": ["type", "Bug", "tickets"],
+        "format": "sf"
+      },
+      {
+        "title": "Stories",
+        "action": "len",
+        "value": ["type", "Story", "tickets"],
+        "format": "sf"
+      },
+      {
+        "title": "Sub-Task",
+        "action": "len",
+        "value": ["type", "Sub-task", "tickets"],
+        "format": "sf"
+      },
+      {
+        "title": "Task",
+        "action": "len",
+        "value": ["type", "Task", "tickets"],
+        "format": "sf"
+      },
+      {
+        "title": "Epic",
+        "action": "len",
+        "value": ["type", "Epic", "tickets"],
+        "format": "sf"
+      },
+      {
+        "title": "Blocked",
+        "action": "len",
+        "value": ["status", "Blocked", "tickets"],
+        "format": "sf"
+      },
+      {
+        "title": "Code Review",
+        "action": "len",
+        "value": ["status", "Code Review", "tickets"],
+        "format": "sf"
+      },
+      {
+        "title": "Defects Found",
+        "action": "len",
+        "value": ["status", "Defects Found", "tickets"],
+        "format": "sf"
+      },
+      {
+        "title": "Done",
+        "action": "len",
+        "value": ["status", "Done", "tickets"],
+        "format": "sf"
+      },
+      {
+        "title": "Draft",
+        "action": "len",
+        "value": ["status", "Draft", "tickets"],
+        "format": "sf"
+      },
+      {
+        "title": "In Progress",
+        "action": "len",
+        "value": ["status", "In Progress", "tickets"],
+        "format": "sf"
+      },
+      {
+        "title": "QA Complete",
+        "action": "len",
+        "value": ["status", "QA Complete", "tickets"],
+        "format": "sf"
+      },
+      {
+        "title": "QA in Progress",
+        "action": "len",
+        "value": ["status", "QA in Progress", "tickets"],
+        "format": "sf"
+      },
+      {
+        "title": "Ready for DEV",
+        "action": "len",
+        "value": ["status", "Ready for DEV", "tickets"],
+        "format": "sf"
+      },
+      {
+        "title": "Ready for QA",
+        "action": "len",
+        "value": ["status", "Ready for QA", "tickets"],
+        "format": "sf"
+      },
+      {
+        "title": "Total Bugs",
+        "action": "len",
+        "value": ["openBugs"],
+        "format": "sf"
+      },
+      {
+        "title": "Open: Low",
+        "action": "len",
+        "value": ["severity", "low", "tickets"],
+        "format": "sf"
+      },
+      {
+        "title": "Open: Medium",
+        "action": "len",
+        "value": ["severity", "medium", "tickets"],
+        "format": "sf"
+      },
+      {
+        "title": "Open: High",
+        "action": "len",
+        "value": ["severity", "high", "tickets"],
+        "format": "sf"
+      },
+      {
+        "title": "Open: Critical",
+        "action": "len",
+        "value": ["severity", "critical", "tickets"],
+        "format": "sf"
+      },
+      {
+        "title": "Open: No Severity",
+        "action": "len",
+        "value": ["severity", "none", "tickets"],
+        "format": "sf"
+      },
+      {
+        "title": "Open: P1",
+        "action": "len",
+        "value": ["priority", "P1", "tickets"],
+        "format": "sf"
+      },
+      {
+        "title": "Open: P2",
+        "action": "len",
+        "value": ["priority", "P2", "tickets"],
+        "format": "sf"
+      },
+      {
+        "title": "Open: P3",
+        "action": "len",
+        "value": ["priority", "P3", "tickets"],
+        "format": "sf"
+      },
+      {
+        "title": "Open: P4",
+        "action": "len",
+        "value": ["priority", "P4", "tickets"],
+        "format": "sf"
+      },
+      {
+        "title": "Open: P5",
+        "action": "len",
+        "value": ["priority", "P5", "tickets"],
+        "format": "sf"
+      },
+      {
+        "title": "List of Blocked",
+        "action": "get",
+        "value": ["status", "Blocked", "tickets"],
+        "format": "nf"
+      },
+      {
+        "title": "List of Code Review",
+        "action": "get",
+        "value": ["status", "Code Review", "tickets"],
+        "format": "nf"
+      },
+      {
+        "title": "List of Defects Found",
+        "action": "get",
+        "value": ["status", "Defects Found", "tickets"],
+        "format": "nf"
+      },
+      {
+        "title": "List of Done",
+        "action": "get",
+        "value": ["status", "Done", "tickets"],
+        "format": "nf"
+      },
+      {
+        "title": "List of Draft",
+        "action": "get",
+        "value": ["status", "Draft", "tickets"],
+        "format": "nf"
+      },
+      {
+        "title": "List of In Progress",
+        "action": "get",
+        "value": ["status", "In Progress", "tickets"],
+        "format": "nf"
+      },
+      {
+        "title": "List of QA Complete",
+        "action": "get",
+        "value": ["status", "QA Complete", "tickets"],
+        "format": "sf"
+      },
+      {
+        "title": "List of QA in Progress",
+        "action": "get",
+        "value": ["status", "QA in Progress", "tickets"],
+        "format": "nf"
+      },
+      {
+        "title": "List of Ready for DEV",
+        "action": "get",
+        "value": ["status", "Ready for DEV", "tickets"],
+        "format": "nf"
+      },
+      {
+        "title": "List of Ready for QA",
+        "action": "get",
+        "value": ["status", "Ready for QA", "tickets"],
+        "format": "sf"
+      },
+      {
+        "title": "List of ALT tickets with no label",
+        "action": "get",
+        "value": ["unlabeled"],
+        "format": "nf"
+      }
+    ]
+}
+

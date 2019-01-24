@@ -7,10 +7,6 @@
   },
   "AUTH_TESTRAIL": "",
   "URL_SMARTSHEETS": "https://api.smartsheet.com/2.0/sheets/",
-  "SMARTSHEETS": {
-      "ALT in Sprint Mobile Coverage - Daily": 1572782262773636,
-      "Mobile Test Coverage": 6185156768753540
-  },
   "HEADER_SMARTSHEETS": {
     "Cache-Control": "no-cache",
     "Authorization": ""},

@@ -1,0 +1,40 @@
+{
+    "smarthsheet_id": "6185156768753540",
+    "title": "Mobile Test Coverage",
+    "formatting": {
+      "nf": ",,,,,,,,,18,,,,,,",
+      "sf": ",2,1,,,,1,,,8,,,,,,"
+    },
+    "totalRows": 2,
+    "mappings": [
+      {
+        "title": "Coverage",
+        "action": "valueAsIs",
+        "value": "Stories without Refs",
+        "format": "sf",
+        "row": 0
+      },
+      {
+        "title": "Number of Stories",
+        "action": "len",
+        "value": ["storyReferences", "hasNoReference"],
+        "format": "sf",
+        "row": 0
+      },
+      {
+        "title": "Coverage",
+        "action": "valueAsIs",
+        "value": "Stories with Refs",
+        "format": "sf",
+        "row": 1
+      },
+      {
+        "title": "Number of Stories",
+        "action": "len",
+        "value": ["storyReferences", "hasReference"],
+        "format": "sf",
+        "row": 1
+      }
+
+    ]
+}
