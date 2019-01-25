@@ -7,13 +7,14 @@ import requests
 
 class Smartsheets:
 
-    def __init__(self, conn, smartsheet, ticket_data: dict):
+    def __init__(self, conn, smartsheet, ticket_data: dict, build_type='normal'):
         self._columns: dict = {}
         self._smartsheet = smartsheet
         self._conn = conn
         self._ticket_data = ticket_data
+        self._build_type = build_type
 
-        # self._build()
+        self._build()
 
     def create_sheet(self):
         url_o = self._conn['URL_SMARTSHEETS'] + str(1135760750471044)
@@ -41,7 +42,10 @@ class Smartsheets:
 
     def _build(self):
         self._set_columns()
-        self._delete_rows()
+
+        if self._build_type == 'normal':
+            self._delete_rows()
+
         self._set_rows()
 
     def _set_columns(self):

@@ -1,30 +1,36 @@
 {
-    "smarthsheet_id": "1165488903481220",
-    "title": "Back-End Test Coverage",
+    "smarthsheet_id": "1918263241271172",
+    "title": "Mobile Test Coverage",
     "formatting": {
       "nf": ",,,,,,,,,18,,,,,,",
       "sf": ",2,1,,,,1,,,8,,,,,,"
     },
-    "totalRows": 2,
     "mappings": [
       {
-        "title": "Coverage",
+        "title": "Pass vs. Fail",
         "action": "valueAsIs",
-        "value": "Stories without Refs",
+        "value": "Endpoint Tests Passed",
         "format": "sf",
         "row": 0
       },
       {
-        "title": "Number of Stories",
+        "title": "Most Recent Test Results",
         "action": "len",
         "value": ["storyReferences", "hasNoReference"],
         "format": "sf",
         "row": 0
       },
       {
-        "title": "Coverage",
+        "title": "Pass vs. Fail",
         "action": "valueAsIs",
-        "value": "Stories with Refs",
+        "value": "Endpoint Tests Failed",
+        "format": "sf",
+        "row": 1
+      },
+      {
+        "title": "Most Recent Test Results",
+        "action": "len",
+        "value": ["storyReferences", "hasReference"],
         "format": "sf",
         "row": 1
       },
@@ -32,8 +38,8 @@
         "title": "Number of Stories",
         "action": "len",
         "value": ["storyReferences", "hasReference"],
-        "format": "sf",
-        "row": 1
-      }
+        "format": "sf"
+      },
+
     ]
 }

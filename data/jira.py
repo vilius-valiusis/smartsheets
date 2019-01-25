@@ -1,3 +1,4 @@
+import datetime
 import re
 from pprint import pprint
 
@@ -14,6 +15,7 @@ class Jira:
         self._total_issues: int = 0
         self._references: list = references
         self._ticket_data: dict = {
+            'date': '',
             'total': 0,
             'tickets': {},
             'severity': {},
@@ -29,6 +31,7 @@ class Jira:
         self._build()
 
     def _build(self):
+        self._set_date()
         self._set_total_issues()
         self._set_tickets()
         self._set_severity()
@@ -45,13 +48,10 @@ class Jira:
         self._total_issues = r.json()['total']
         self._ticket_data['total'] = self._total_issues
 
-    def _is_sprint_assigned(self, sprint):
-        if sprint is not None and self._ignore_sprints == []:
-            return True
-        elif sprint is not None and self._ignore_sprints != []:
-            for s in self._ignore_sprints:
-                if sprint is not None and s not in sprint[0]:
-                    return True
+    def _ignore_ticket(self, sprint):
+        for s in self._ignore_sprints:
+            if sprint is not None and s in sprint[0]:
+                return True
         return False
 
     def _is_labeled(self, labels):
@@ -67,6 +67,12 @@ class Jira:
                     has_correct_labels = True
         return has_correct_labels, has_incorrect_labels
 
+    def _set_date(self):
+        month = datetime.date.today().strftime("%m")
+        date = datetime.date.today().strftime("%d")
+        year = datetime.date.today().strftime("%y")
+        self._ticket_data['date'] = str(month + "/" + date + "/" + year)
+
     def _set_tickets(self):
         sprints = []
         for i in range(0, self._total_issues, 100):
@@ -78,20 +84,19 @@ class Jira:
             for ticket in r.json()['issues']:
                 labels = ticket['fields']['labels']
                 has_correct_labels, has_incorrect_labels = self._is_labeled(labels)
-
-                if has_correct_labels and not has_incorrect_labels:
+                sprint = ticket['fields']['customfield_10007']
+                if has_correct_labels and not has_incorrect_labels and not self._ignore_ticket(sprint):
                     fields = ticket['fields']
                     key = ticket['key']
                     status = fields['status']['name']
-                    sprint = fields['customfield_10007']
-                    if sprint is not None:
-                        print(sprint)
-                        m = re.search('id=(.+?),', sprint[0])
-                        n = re.search('name=(.+?),', sprint[0])
-                        if m or n:
-                            found = m.group(1)
-                            found1 = n.group(1)
-                            sprints.append((found, found1))
+                    # if sprint is not None:
+                    #     print(sprint)
+                    #     m = re.search('id=(.+?),', sprint[0])
+                    #     n = re.search('name=(.+?),', sprint[0])
+                    #     if m or n:
+                    #         found = m.group(1)
+                    #         found1 = n.group(1)
+                    #         sprints.append((found, found1))
                     # if sprint is not None and sprint not in sprints:
                     #     sprints.append(sprint)
                     self._ticket_data['tickets'][key] = {
@@ -104,9 +109,8 @@ class Jira:
                         'isOpenBug': fields['issuetype']['name'] == 'Bug' and status != 'Done',
                         'isLabeled': labels != [],
                         'hasTestCase': key in self._references,
-                        'hasAssignedSprint': self._is_sprint_assigned(sprint)
+                        'hasAssignedSprint': sprint is not None
                     }
-        pprint(set(sprints))
 
     def _set_severity(self):
         severity_dict = {

@@ -3,7 +3,7 @@ import requests
 
 class Testrails:
 
-    def __init__(self, connection_details, filters, ignore_filters=None):
+    def __init__(self, connection_details, filters):
         self._suites = []
         self._references = []
         self._filters = filters

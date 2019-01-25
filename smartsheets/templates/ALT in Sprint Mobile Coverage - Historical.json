@@ -1,11 +1,18 @@
 {
-    "smarthsheet_id": "1507223881967492",
+    "smarthsheet_id": "3572856442382212",
     "title": "ALT in Sprint Mobile Coverage - Daily",
     "formatting": {
-      "nf": ",,,,,,,,,18,,,,,,",
+      "sf": ",,,,,,,,,18,,,,,,",
       "sf": ",2,1,,,,1,,,8,,,,,,"
     },
+    "totalRows": 1,
     "mappings": [
+      {
+        "title": "Date",
+        "action": "int",
+        "value": ["date"],
+        "format": "sf"
+      },
       {
         "title": "References",
         "action": "len",
@@ -25,24 +32,6 @@
         "format": "sf"
       },
       {
-        "title": "List of Stories that Need References",
-        "action": "get",
-        "value": ["storyReferences", "hasNoReference"],
-        "format": "nf"
-      },
-      {
-        "title": "List of Stories that Have References",
-        "action": "get",
-        "value": ["storyReferences", "hasReference"],
-        "format": "nf"
-      },
-      {
-        "title": "List of Refs for Stories in Draft/Blocked",
-        "action": "get",
-        "value": ["storyReferences", "hasReferenceButDraftOrBlocked"],
-        "format": "nf"
-      },
-      {
         "title": "Refs in Draft/Blocked",
         "action": "len",
         "value": ["storyReferences", "hasReferenceButDraftOrBlocked"],
@@ -55,7 +44,7 @@
         "format": "sf"
       },
       {
-        "title": "Total AES",
+        "title": "Total Fueled",
         "action": "len",
         "value": ["tickets"],
         "format": "sf"
@@ -215,72 +204,6 @@
         "action": "len",
         "value": ["priority", "P5", "tickets"],
         "format": "sf"
-      },
-      {
-        "title": "List of Blocked",
-        "action": "get",
-        "value": ["status", "Blocked", "tickets"],
-        "format": "nf"
-      },
-      {
-        "title": "List of Code Review",
-        "action": "get",
-        "value": ["status", "Code Review", "tickets"],
-        "format": "nf"
-      },
-      {
-        "title": "List of Defects Found",
-        "action": "get",
-        "value": ["status", "Defects Found", "tickets"],
-        "format": "nf"
-      },
-      {
-        "title": "List of Done",
-        "action": "get",
-        "value": ["status", "Done", "tickets"],
-        "format": "nf"
-      },
-      {
-        "title": "List of Draft",
-        "action": "get",
-        "value": ["status", "Draft", "tickets"],
-        "format": "nf"
-      },
-      {
-        "title": "List of In Progress",
-        "action": "get",
-        "value": ["status", "In Progress", "tickets"],
-        "format": "nf"
-      },
-      {
-        "title": "List of QA Complete",
-        "action": "get",
-        "value": ["status", "QA Complete", "tickets"],
-        "format": "sf"
-      },
-      {
-        "title": "List of QA in Progress",
-        "action": "get",
-        "value": ["status", "QA in Progress", "tickets"],
-        "format": "nf"
-      },
-      {
-        "title": "List of Ready for DEV",
-        "action": "get",
-        "value": ["status", "Ready for DEV", "tickets"],
-        "format": "nf"
-      },
-      {
-        "title": "List of Ready for QA",
-        "action": "get",
-        "value": ["status", "Ready for QA", "tickets"],
-        "format": "sf"
-      },
-      {
-        "title": "List of ALT tickets with no label",
-        "action": "get",
-        "value": ["unlabeled"],
-        "format": "nf"
       }
     ]
 }

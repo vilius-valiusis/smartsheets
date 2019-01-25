@@ -15,5 +15,10 @@
   "URL_JIRA": "https://te2web.atlassian.net/rest/api/2/search?jql=project=ALT",
   "HEADER_JIRA": {
     "Accept": "application/json",
-    "Authorization": ""}
+    "Authorization": ""},
+  "URL_RUNSCOPE": "https://api.runscope.com/buckets/77lvn1mrcmle/tests",
+  "HEADER_RUNSCOPE":
+  {
+   "Authorization": ""
+  }
 }
