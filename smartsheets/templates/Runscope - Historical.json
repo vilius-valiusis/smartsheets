@@ -1,0 +1,30 @@
+{
+    "smarthsheet_id": "322886901753732",
+    "title": "Mobile Test Coverage",
+    "formatting": {
+      "nf": ",,,,,,,,,18,,,,,,",
+      "sf": ",2,1,,,,1,,,8,,,,,,"
+    },
+    "totalRows": 1,
+    "mappings": [
+
+      {
+        "title": "Passing",
+        "action": "int",
+        "value": ["runscope", "total_passed"],
+        "format": "sf"
+      },
+      {
+        "title": "Failed",
+        "action": "int",
+        "value": ["runscope", "total_failed"],
+        "format": "sf"
+      },
+      {
+        "title": "Time & Date of Last Alterra Endpoint Test",
+        "action": "str",
+        "value": ["runscope", "last_test"],
+        "format": "sf"
+      }
+    ]
+}
