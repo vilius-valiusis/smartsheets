@@ -25,12 +25,11 @@ class Jira:
             'storyReferences': {},
             'openBugs': [],
             'unlabeled': [],
-            'references': references
+            'references': references,
+            'runscope': {}
         }
 
-        self._build()
-
-    def _build(self):
+    def build(self):
         self._set_date()
         self._set_total_issues()
         self._set_tickets()

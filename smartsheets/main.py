@@ -8,7 +8,11 @@ from data.runscope import Runscope
 from data.smartsheets import Smartsheets
 from data.testrails import Testrails
 
-
+testRailPassword = 'Login123!'
+testRailEmail = 'engineering@theexperienceengine.com'
+jiraBasicAuth = 'dmlsaXVzLnZhbGl1c2lzQGFjY2Vzc28uY29tOmMyZm5jNm1GWlFuWG9zS0NnNUpENzExQQ=='
+smartSheetPassword = '50jhmo20cy2gya3mxvoj1f3xhh'
+runScopePassword = '5b75eff3-8a5d-4c32-9795-7ec35be97215'
 
 pre_r1_sprint_ids = [
     'ALT AES - Sprint 1 8/15 - 8/29', 'ALT AES - Sprint 2 8/29 - 9/13', 'ALT AES - Sprint 3 9/13 - 9/26',
@@ -42,7 +46,7 @@ def read_json(file_name):
 
 
 def create_sheet(con):
-    url_o = con['URL_SMARTSHEETS'] + str(857155348785028)
+    url_o = con['URL_SMARTSHEETS'] + str(1165488903481220)
     r = requests.get(url_o, headers=con['HEADER_SMARTSHEETS'])
     columns = r.json()['columns']
     newCols = []
@@ -60,7 +64,7 @@ def create_sheet(con):
                 'type': col['type']
             })
 
-    TEST = {"name": "Runscope: Historical", 'columns': newCols}
+    TEST = {"name": "Back-end: Test Coverage", 'columns': newCols}
     url_r = 'https://api.smartsheet.com/2.0/workspaces/4181067549697924/sheets'
     r = requests.post(url_r, headers=con['HEADER_SMARTSHEETS'], json=TEST)
     print(r.status_code, r.content)
@@ -73,13 +77,13 @@ def run_mobile(con):
 
     testrails = Testrails(con, testrails_mobile_suit_filters)
     references = testrails.get_references()
-    jira = Jira(con, references, jira_mobile_labels, ignore_sprints=pre_r1_mobile_sprint_ids)
+    jira = Jira(con, references, jira_mobile_labels, ignore_sprints=pre_r1_mobile_sprint_ids).build()
     ticket_data = jira.get_ticket_data()
 
-    # # ALT in Sprint Mobile Coverage - Daily
-    # Smartsheets(con, sprint_mobile_coverage, ticket_data)
-    # # Mobile Test Coverage
-    # Smartsheets(con, mobile_coverage, ticket_data)
+    # ALT in Sprint Mobile Coverage - Daily
+    Smartsheets(con, sprint_mobile_coverage, ticket_data)
+    # Mobile Test Coverage
+    Smartsheets(con, mobile_coverage, ticket_data)
     # ALT in Sprint Mobile Coverage - historical
     Smartsheets(con, sprint_mobile_coverage_historical, ticket_data, build_type='historical')
 
@@ -92,20 +96,30 @@ def run_backend(con):
     testrails = Testrails(con, testrails_backend_suit_filters)
     references = testrails.get_references()
     jira = Jira(con, references, jira_backend_labels,
-                ignore_labels=jira_backend_labels_ignore, ignore_sprints=pre_r1_sprint_ids)
+                ignore_labels=jira_backend_labels_ignore, ignore_sprints=pre_r1_sprint_ids).build()
     ticket_data = jira.get_ticket_data()
 
-    # # ALT in Sprint Back-end Coverage - Daily
-    # Smartsheets(con, sprint_backend_coverage, ticket_data)
-    # # Back-end Test Coverage
-    # Smartsheets(con, backend_coverage, ticket_data)
+    # ALT in Sprint Back-end Coverage - Daily
+    Smartsheets(con, sprint_backend_coverage, ticket_data)
+    # Back-end Test Coverage
+    Smartsheets(con, backend_coverage, ticket_data)
     # ALT in Sprint Mobile Coverage - historical
     Smartsheets(con, sprint_mobile_coverage_historical, ticket_data, build_type='historical')
 
 
 def run_runscope(con):
+    runscope_daily = read_json('templates/Runscope - Daily.json')
+    runscope_historical = read_json('templates/Runscope - Historical.json')
+    runscope_current_status = read_json('templates/Runscope - Current Status.json')
+
     runscope = Runscope(con)
-    pass
+    runscope_data = runscope.get_data()
+    ticket_data = Jira(con, [], []).get_ticket_data()
+    ticket_data['runscope'] = runscope_data
+
+    # Smartsheets(con, runscope_daily, ticket_data)
+    # Smartsheets(con, runscope_historical, ticket_data, build_type='historical')
+    Smartsheets(con, runscope_current_status, ticket_data)
 
 
 def main():
@@ -119,7 +133,7 @@ def main():
     # run_mobile(con)
     # run_backend(con)
     # create_sheet(con)
-    run_runscope(con)
+    # run_runscope(con)
 
 
 if __name__ == main():
