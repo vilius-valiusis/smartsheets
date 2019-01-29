@@ -1,8 +1,5 @@
 import json
 import sys
-from pprint import pprint
-
-import requests
 
 from data.jira import Jira
 from data.runscope import Runscope
