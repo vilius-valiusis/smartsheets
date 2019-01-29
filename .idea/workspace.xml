@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2443a95f-2dce-4177-83a7-8a989e1cf148" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/smartsheets/templates/testrail open runs.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/jira.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/jira.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/runscope.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/runscope.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/smartsheets.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/smartsheets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/testrails.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/testrails.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartsheets/connection_vars.json" beforeDir="false" afterPath="$PROJECT_DIR$/smartsheets/connection_vars.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/smartsheets/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/smartsheets/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartsheets/templates/Runscope - Daily.json" beforeDir="false" afterPath="$PROJECT_DIR$/smartsheets/templates/Runscope - Daily.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartsheets/templates/Back-End Test Coverage.json" beforeDir="false" afterPath="$PROJECT_DIR$/smartsheets/templates/Back-End Test Coverage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartsheets/templates/Mobile Test Coverage.json" beforeDir="false" afterPath="$PROJECT_DIR$/smartsheets/templates/Mobile Test Coverage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartsheets/templates/Runscope - Historical.json" beforeDir="false" afterPath="$PROJECT_DIR$/smartsheets/templates/Runscope - Historical.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,17 +25,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/smartsheets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="74" selection-start-line="74" selection-end-line="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/smartsheets/templates/Runscope - Historical.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="46" lean-forward="true" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+            <state relative-caret-position="-1558">
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -38,8 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/jira.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="79" column="1" lean-forward="true" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
+            <state relative-caret-position="-510">
+              <caret line="29" column="21" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="21" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -50,65 +48,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/testrails.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+            <state relative-caret-position="630">
+              <caret line="42" column="54" lean-forward="true" selection-start-line="42" selection-start-column="54" selection-end-line="42" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/smartsheets/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/smartsheets/templates/Runscope - Current Status.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/runscope.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/smartsheets/templates/Runscope - Daily.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="46" column="40" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/smartsheets/templates/ALT in Sprint Back-end Coverage - Daily.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3315">
-              <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/smartsheets/templates/Mobile Test Coverage.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-28">
-              <caret line="1" column="39" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor>
+                <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -136,7 +89,6 @@
       <find>references</find>
       <find>_references</find>
       <find>ticketData</find>
-      <find>_is_request_working</find>
       <find>Bug</find>
       <find>hasReference</find>
       <find>hasTestCase</find>
@@ -152,6 +104,7 @@
       <find>ALTDroid-Sprint8 11/9-11/26</find>
       <find>get</find>
       <find>int</find>
+      <find>_is_request_working</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;get&quot;</replace>
@@ -176,15 +129,19 @@
         <option value="$PROJECT_DIR$/smartsheets/ALT in Sprint Mobile Coverage - Historical.json" />
         <option value="$PROJECT_DIR$/smartsheets/ALT in Sprint Back-end Coverage - Historical.json" />
         <option value="$PROJECT_DIR$/smartsheets/templates/ALT in Sprint Back-end Coverage - Historical.json" />
-        <option value="$PROJECT_DIR$/smartsheets/connection_vars.json" />
-        <option value="$PROJECT_DIR$/data/testrails.py" />
-        <option value="$PROJECT_DIR$/data/jira.py" />
         <option value="$PROJECT_DIR$/data/runscope.py" />
         <option value="$PROJECT_DIR$/smartsheets/templates/Runscope - Daily.json" />
-        <option value="$PROJECT_DIR$/data/smartsheets.py" />
-        <option value="$PROJECT_DIR$/smartsheets/templates/Runscope - Historical.json" />
         <option value="$PROJECT_DIR$/smartsheets/templates/Runscope - Current Status.json" />
+        <option value="$PROJECT_DIR$/smartsheets/templates/Runscope - Historical.json" />
+        <option value="$PROJECT_DIR$/smartsheets/templates/Mobile Test Coverage.json" />
+        <option value="$PROJECT_DIR$/smartsheets/templates/Back-End Test Coverage.json" />
+        <option value="$PROJECT_DIR$/data/jira.py" />
+        <option value="$PROJECT_DIR$/smartsheets/connection_vars.json" />
+        <option value="$PROJECT_DIR$/smartsheets/templates/testrail open runs.json" />
         <option value="$PROJECT_DIR$/smartsheets/main.py" />
+        <option value="$PROJECT_DIR$/data/testrails.py" />
+        <option value="$PROJECT_DIR$/data/smartsheets.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -216,12 +173,6 @@
               <item name="smartsheets" type="b2602c69:ProjectViewProjectNode" />
               <item name="smartsheets" type="462c0819:PsiDirectoryNode" />
               <item name="smartsheets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smartsheets" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartsheets" type="462c0819:PsiDirectoryNode" />
-              <item name="smartsheets" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -362,14 +313,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="-2" width="1853" height="1082" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24972677" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24972677" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32948583" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32948583" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32948583" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -417,13 +367,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/smartsheets/templates/Back-End Test Coverage.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3/datetime.pyi">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -431,30 +374,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/smartsheets/connection_vars.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/smartsheets/templates/ALT in Sprint Mobile Coverage - Daily.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="39" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smartsheets/templates/ALT in Sprint Mobile Coverage - Historical.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-210">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smartsheets/templates/Mobile Test Coverage.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-28">
           <caret line="1" column="39" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
         </state>
       </provider>
@@ -466,48 +388,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/testrails.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/jira.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="79" column="1" lean-forward="true" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/smartsheets/templates/ALT in Sprint Back-end Coverage - Historical.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smartsheets/templates/Runscope - Daily.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="46" column="40" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/runscope.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/smartsheets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
         </state>
       </provider>
     </entry>
@@ -518,20 +402,105 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/smartsheets/templates/ALT in Sprint Mobile Coverage - Historical.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-300">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/runscope.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/jira.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510">
+          <caret line="29" column="21" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/smartsheets/templates/Runscope - Historical.json">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartsheets/templates/Mobile Test Coverage.json">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="46" lean-forward="true" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+          <caret line="19" column="55" lean-forward="true" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartsheets/templates/Back-End Test Coverage.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/smartsheets/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+        <state relative-caret-position="425">
+          <caret line="130" column="30" selection-start-line="130" selection-start-column="30" selection-end-line="130" selection-end-column="30" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartsheets/templates/testrail open runs.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-75">
+          <caret line="1" column="39" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/smartsheets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1558">
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartsheets/connection_vars.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="20" lean-forward="true" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartsheets/templates/Runscope - Daily.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="48" column="22" lean-forward="true" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/testrails.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="54" lean-forward="true" selection-start-line="42" selection-start-column="54" selection-end-line="42" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

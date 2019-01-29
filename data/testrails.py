@@ -3,16 +3,16 @@ import requests
 
 class Testrails:
 
-    def __init__(self, connection_details, filters):
+    def __init__(self, connection_details, filters=[]):
         self._suites = []
         self._references = []
         self._filters = filters
+        self._run_type = ['get_runs', 'get_plans']
 
         self._conn = connection_details
+        self._open_runs = []
 
-        self._build()
-
-    def _build(self):
+    def build(self):
         self._set_suites()
         self._set_references()
 
@@ -27,6 +27,24 @@ class Testrails:
                 suite_id = suite['id']
                 list_of_suites.append(suite_id)
         self._suites = list_of_suites
+
+    def get_open_runs(self):
+        for run_type in self._run_type:
+            url = self._conn['URL_TESTRAILS'] + run_type + '/' + self._conn['TESTRAILS_PROJECT_ID'] + '&is_completed=0'
+            print(url)
+            r = requests.get(url, headers=self._conn['HEADER_TESTRAIL'], auth=self._conn['AUTH_TESTRAIL'])
+            self._is_request_working(r.status_code, 'Fetching open runs of type {run_type}'.format(run_type=run_type))
+
+            for run in r.json():
+                self._open_runs.append({
+                    "name":     run['name'],
+                    'passed':   run['passed_count'],
+                    'blocked':  run['blocked_count'],
+                    'untested': run['untested_count'],
+                    're-test':  run['retest_count'],
+                    'failed':   run['failed_count']
+                })
+        return self._open_runs
 
     def _set_references(self):
         for suite_id in self._suites:

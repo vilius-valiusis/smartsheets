@@ -1,0 +1,52 @@
+{
+    "smarthsheet_id": "2146581555242884",
+    "title": "Mobile Test Coverage",
+    "formatting": {
+      "nf": ",,,,,,,,,18,,,,,,",
+      "sf": ",2,1,,,,1,,,8,,,,,,"
+    },
+    "mappings": [
+      {
+        "title": "Test Run Name",
+        "action": "str",
+        "value": ["openRuns"],
+        "sub_value": "name",
+        "format": "sf"
+      },
+      {
+        "title": "Passed",
+        "action": "str",
+        "value": ["openRuns"],
+        "sub_value": "passed",
+        "format": "sf"
+      },
+      {
+        "title": "Blocked",
+        "action": "str",
+        "value": ["openRuns"],
+        "sub_value": "blocked",
+        "format": "sf"
+      },
+      {
+        "title": "Untested",
+        "action": "str",
+        "value": ["openRuns"],
+        "sub_value": "untested",
+        "format": "sf"
+      },
+      {
+        "title": "ReTest",
+        "action": "str",
+        "value": ["openRuns"],
+        "sub_value": "re-test",
+        "format": "sf"
+      },
+      {
+        "title": "Failed",
+        "action": "str",
+        "value": ["openRuns"],
+        "sub_value": "failed",
+        "format": "sf"
+      }
+    ]
+}

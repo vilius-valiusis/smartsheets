@@ -26,7 +26,8 @@ class Jira:
             'openBugs': [],
             'unlabeled': [],
             'references': references,
-            'runscope': {}
+            'runscope': {},
+            'openRuns': []
         }
 
     def build(self):

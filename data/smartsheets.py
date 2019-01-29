@@ -1,6 +1,4 @@
-import random
 from pprint import pprint
-from time import sleep
 
 import requests
 
@@ -28,7 +26,7 @@ class Smartsheets:
         url = self._conn['URL_SMARTSHEETS'] + self._smartsheet['smarthsheet_id']
         r = requests.get(url, headers=self._conn['HEADER_SMARTSHEETS'])
         message = "Fetching smartsheet with the ID: {id}".format(id=self._smartsheet['smarthsheet_id'])
-        self._is_request_working(r.status_code, message)
+        self._is_request_working(r, message)
         for column in r.json()['columns']:
             self._columns[column['title']] = column['id']
         pass
@@ -38,7 +36,7 @@ class Smartsheets:
         url = self._conn['URL_SMARTSHEETS'] + self._smartsheet['smarthsheet_id']
         r = requests.get(url, headers=self._conn['HEADER_SMARTSHEETS'])
         message = "Fetching column IDs for smartsheet ID: {id}".format(id=self._smartsheet['smarthsheet_id'])
-        self._is_request_working(r.status_code, message)
+        self._is_request_working(r, message)
 
         [row_ids.append(str(row['id'])) for row in r.json()['rows']]
 
@@ -47,7 +45,7 @@ class Smartsheets:
             url = self._conn['URL_SMARTSHEETS'] + self._smartsheet['smarthsheet_id'] + '/rows?ids=' + id_string
             r = requests.delete(url, headers=self._conn['HEADER_SMARTSHEETS'])
             message = "Deleting the next 450 rows with starting index of: {row}".format(row=len(row_ids[row:450 + row]))
-            self._is_request_working(r.status_code, message)
+            self._is_request_working(r, message)
 
     @staticmethod
     def _set_row_data(json, col_id, data, summary_format):
@@ -60,6 +58,8 @@ class Smartsheets:
             data = self._ticket_data['tickets']
         elif self._ticket_data['runscope']:
             data = self._ticket_data['runscope']['endpoints']
+        elif self._ticket_data['openRuns']:
+            data = self._ticket_data['openRuns']
 
         for i, v in enumerate(data):
             json = {"toBottom": 'true', "cells": []}
@@ -88,13 +88,18 @@ class Smartsheets:
                     row_no = col['row']
 
                 if (i == 0 and row_no == -1) or (row_no != -1 and row_no == i):
-                    if action == 'len':
+                    if action == 'len' and sub_value == '':
                         self._set_row_data(json, col_id, len(var), formatting)
                         continue
                     if action == 'int' or action == 'str':
-                        self._set_row_data(json, col_id, var, formatting)
-                        continue
-                    if action == 'valueAsIs':
+                        if sub_value == '':
+                            self._set_row_data(json, col_id, var, formatting)
+                            continue
+                        else:
+                            self._set_row_data(json, col_id, var[i][sub_value], formatting)
+                            continue
+
+                    if action == 'valueAsIs' and sub_value == '':
                         self._set_row_data(json, col_id, col['value'], formatting)
                         continue
 
@@ -112,15 +117,16 @@ class Smartsheets:
 
             r = requests.post(url, headers=self._conn['HEADER_SMARTSHEETS'], json=json)
             message = 'Create row: {row}'.format(row=i)
-            self._is_request_working(r.status_code, message)
+            self._is_request_working(r, message)
 
     def get_columns(self) -> dict:
         return self._columns
 
     @staticmethod
-    def _is_request_working(status, message):
-        if status != 200:
-            print('[{status}] Failed to perform get request. {m}'.format(status=status, m=message))
+    def _is_request_working(r, message):
+        if r.status_code != 200:
+            print('[{status}] Failed to perform get request. {m}'.format(status=r.status_code, m=message))
+            pprint('[ERROR_CONTENT] \n{content}'.format(content=r.content))
             print('Exiting ...')
             exit(0)
         else:

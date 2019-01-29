@@ -7,17 +7,16 @@
     },
     "totalRows": 1,
     "mappings": [
-
-      {
-        "title": "Passing",
-        "action": "int",
-        "value": ["runscope", "total_passed"],
-        "format": "sf"
-      },
       {
         "title": "Failed",
         "action": "int",
         "value": ["runscope", "total_failed"],
+        "format": "sf"
+      },
+      {
+        "title": "Passing",
+        "action": "int",
+        "value": ["runscope", "total_passed"],
         "format": "sf"
       },
       {

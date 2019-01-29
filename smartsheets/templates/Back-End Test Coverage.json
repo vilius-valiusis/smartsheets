@@ -12,28 +12,28 @@
         "action": "valueAsIs",
         "value": "Stories without Refs",
         "format": "sf",
-        "row": 0
+        "row": 1
       },
       {
         "title": "Number of Stories",
         "action": "len",
         "value": ["storyReferences", "hasNoReference"],
         "format": "sf",
-        "row": 0
+        "row": 1
       },
       {
         "title": "Coverage",
         "action": "valueAsIs",
         "value": "Stories with Refs",
         "format": "sf",
-        "row": 1
+        "row": 0
       },
       {
         "title": "Number of Stories",
         "action": "len",
         "value": ["storyReferences", "hasReference"],
         "format": "sf",
-        "row": 1
+        "row": 0
       }
     ]
 }

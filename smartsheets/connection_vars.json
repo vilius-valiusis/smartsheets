@@ -1,4 +1,6 @@
 {
+  "TESTRAILS_PROJECT_ID": "21",
+  "URL_TESTRAILS": "https://te2qa.testrail.net/index.php?/api/v2/",
   "URL_TESTRAIL_SUITES": "https://te2qa.testrail.net/index.php?/api/v2/get_suites/21/&suite_id=",
   "URL_TESTRAIL_CASES": "https://te2qa.testrail.net/index.php?/api/v2/get_cases/21/&suite_id=",
   "HEADER_TESTRAIL": {
