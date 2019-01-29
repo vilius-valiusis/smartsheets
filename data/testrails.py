@@ -31,7 +31,6 @@ class Testrails:
     def get_open_runs(self):
         for run_type in self._run_type:
             url = self._conn['URL_TESTRAILS'] + run_type + '/' + self._conn['TESTRAILS_PROJECT_ID'] + '&is_completed=0'
-            print(url)
             r = requests.get(url, headers=self._conn['HEADER_TESTRAIL'], auth=self._conn['AUTH_TESTRAIL'])
             self._is_request_working(r.status_code, 'Fetching open runs of type {run_type}'.format(run_type=run_type))
 
